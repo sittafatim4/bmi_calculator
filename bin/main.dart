@@ -12,6 +12,12 @@ void main() {
 }
 
 void hitungBMI(double tinggiCm, double beratKg, List<Map<String, dynamic>> riwayat) {
+  // Validasi input
+  if (tinggiCm <= 0 || beratKg <= 0) {
+    print("Input tidak valid: tinggi dan berat harus lebih dari 0.");
+    return;
+  }
+
   double tinggiM = tinggiCm / 100;
   double bmi = beratKg / (tinggiM * tinggiM);
 
